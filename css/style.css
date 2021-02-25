@@ -11,11 +11,6 @@ html {
     overflow-x: hidden;
 }
 
-body {
-    width: 100%;
-    height: 100%;
-}
-
 :root {
     --text-color: #f0f4f5;
     --text-color-dark: #000000;
@@ -64,7 +59,7 @@ section a {
     justify-content: space-between;
     align-items: center;
     background-color: var(--background-color-dark);
-    z-index: 1990;
+    z-index: 9;
 }
 
 .top-fix {
@@ -338,6 +333,8 @@ span.highlight {
 .header img {
     width: 3vw;
     height: 3vw;
+    min-width: 30px;
+    min-height: 30px;
     margin-right: 2vw;
 }
 
@@ -431,12 +428,16 @@ h6 {
         flex-direction: column;
         align-items: flex-end;
         padding: 0px 10px 0px 0px;
-        z-index: 1990;
+        z-index: 9;
         background-color: transparent;
         position: fixed;
         height: 100vh;
         left:unset;
         right:10px;
+    }
+
+    .section {
+        padding-top: 0;
     }
 
     .top-fix {
@@ -447,18 +448,19 @@ h6 {
     .scrollBorder {
         display: none;
     }
-    .navbar_logo {
-        display: none;
-    }
 
     .navContainer {
+        display: none;
         flex-direction: column;
         align-items: flex-start;
-        z-index: 1990;
+        z-index: 9;
         width: fit-content;
         background-color: var(--background-color-p);
         padding: 0;
+        padding-top: 30px;
         height: 100%;
+        animation: ani_dropleft 2.7s cubic-bezier(.215,.61,.355,1) both;
+        -webkit-animation: ani_dropleft 2.7s cubic-bezier(.215,.61,.355,1) both;
     }
     
     .navbar.fix {
@@ -466,7 +468,6 @@ h6 {
     }
 
     .navbar_menu {
-        display: none;
         flex-direction: column;
         align-items: center;
         width: 100%;
@@ -479,22 +480,17 @@ h6 {
     }
 
     .navbar_icons {
-        display: none;
         justify-content: center;
         width: 100%;
     }
 
     .navbar_toggleBtn   {
         display: block;
+        z-index: 999;
     }
 
-    .navbar_menu.active, 
-    .navbar_icons.active,
-    .navbar_logo.active {
+    .navContainer.active {
         display: flex;
-        margin-top: 5vh;
-        animation: ani_dropleft 2.7s cubic-bezier(.215,.61,.355,1) both;
-        -webkit-animation: ani_dropleft 2.7s cubic-bezier(.215,.61,.355,1) both;
     }
 
     .container {

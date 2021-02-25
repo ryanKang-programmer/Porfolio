@@ -5,15 +5,14 @@ const navbar_logo = document.querySelector('.navbar_logo');
 const menu = document.querySelector('.navbar_menu');
 const icons = document.querySelector('.navbar_icons');
 const intro = document.querySelector('#intro');
+const navContainer = document.querySelector('.navContainer');
 const navbarHeight = navbar.offsetHeight;
 
 window.onload = () => {
 }
 
 toggleBtn.addEventListener('click', () => {
-    menu.classList.toggle('active');
-    icons.classList.toggle('active');
-    navbar_logo.classList.toggle('active');
+    navContainer.classList.toggle('active');
 })
 
 window.addEventListener('scroll', function(e) {
@@ -61,4 +60,4 @@ window.addEventListener('scroll', function(e) {
     } else {
         navbar.classList.remove('top-fix');
     }
-})
+}, false);

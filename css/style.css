@@ -228,10 +228,13 @@ blockquote * {
     display: inline-block;
     width: 30%;
     height: 400px;
+    min-width: 350px;
+    cursor: pointer;
 }
 
 #projects .container .card-img{
     height: 60%;
+    display: flex;
 }
 
 .card-img img {
@@ -245,11 +248,13 @@ blockquote * {
 
 #projects .container .card-content{
     height: 40%;
+    padding: 0 10px;
 }
 
 #projects .container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 #projects .container .content{
@@ -305,6 +310,7 @@ h2 {
     border-bottom: 1px solid #ddd;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 #experience .card, #education .card, #skills .card{
@@ -347,6 +353,7 @@ span.highlight {
 
 .header .right {
     text-align: right;
+    flex: 0.75;
 }
 
 h6 {
@@ -376,8 +383,16 @@ h6 {
 
 }
 
-.card-content ul li{
+#skills .card-content ul li{
     margin: 10px;
+    display: inline-flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+#skills .card-content ul li img {
+    width: 90px;
+    height: 90px;
 }
 
 .card-content ul li .icon-container {
@@ -494,7 +509,17 @@ h6 {
     }
 
     .container {
-        width: unset;
+        max-width: unset;
+    }
+
+    #contact .card {
+        border: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+    
+    #contact ul {
+        list-style: none;
     }
 }
 

@@ -99,6 +99,7 @@ section a {
     color: var(--text-color);
     display: flex;
     padding-left: 0;
+    opacity: 0;
 }
 
 .navbar_icons li{
@@ -196,6 +197,10 @@ blockquote * {
     left: 0;
     position: absolute;
     top: 20vh;
+}
+
+#about .container p:last-child{
+    bottom: 0;
 }
 
 #education .header {

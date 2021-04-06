@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
     <title>Ryan's porfolio</title>
     <script src="https://kit.fontawesome.com/3f68ef4df1.js" crossorigin="anonymous"></script>
@@ -45,14 +46,14 @@
         <section id="intro" class="section" style="min-height: 100vh; background: url(images/Ryan_kang.jpg) no-repeat top center;">
             <div class="overlay"></div>
             <div class='container'>
-                <h2>
+                <h2 data-aos="fade-up" data-aos-duration="2000">
                   <span class='highlight'>Enjoy</span> beyond <br>convenience.
                 </h2>
             </div>
         </section>
         <section id="about" class="section" style="min-height: 100vh;">
             <h3 class="white-text background_A">About</h3>
-            <div class="container flow-text">
+            <div class="container flow-text" data-aos="fade-up" data-aos-duration="2000">
                 <blockquote>
                   <h2>
                     The developer who wants to create a user-friendly interface and even provide a fun experience
@@ -175,7 +176,7 @@
         <section id="projects" class="section" style="min-height: 100vh;">
             <h3 class="white-text background_A">Projects</h3>
             <div class="container">
-                <div class="card">
+                <div class="card" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="0">
                   <a href="https://tomato.rirasoft.co.kr:8443/TimeConversion/" target="_blank">
                     <div class='card-img'>
                       <img alt="time zone project" width="100%" heiht="100%" src="images/time_converter_text.png">
@@ -189,7 +190,7 @@
                     </div>
                   </a>
                 </div>
-                <div class="card">
+                <div class="card" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="500">
                   <a href="https://tomato.rirasoft.co.kr:8443/examples/" target="_blank">
                     <div class='card-img'>
                       <img alt="time zone project" width="100%" heiht="100%" src="images/canvas.png">
@@ -203,7 +204,7 @@
                     </div>
                   </a>
                 </div>
-                <div class="card">
+                <div class="card" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="1000">
                   <a href="https://play.google.com/store/apps/details?id=com.rira.tomato.taxi" target="_blank">
                     <div class='card-img'>
                       <img alt="time zone project" width="100%" heiht="100%" src="images/Tomato_taxi.png">
@@ -383,5 +384,9 @@
             </div>
         </section>
     </main>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 </body>
 </html>

@@ -7,8 +7,19 @@ const icons = document.querySelector('.navbar_icons');
 const intro = document.querySelector('#intro');
 const navContainer = document.querySelector('.navContainer');
 const navbarHeight = navbar.offsetHeight;
+const preloader = document.querySelector('.preloader');
 
 window.onload = () => {
+    //preloader.fadeOut(1000); // set duration in brackets
+    let isCount = 0;
+	preloader.style.opacity = 1.0;
+	let period = setInterval(function(){
+		preloader.style.opacity = isCount;
+		isCount -= 0.1;
+	if(isCount < 0.1){
+		clearInterval(period);
+	}
+	},100);
 }
 
 toggleBtn.addEventListener('click', () => {

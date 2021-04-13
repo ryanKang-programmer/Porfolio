@@ -17,6 +17,7 @@ window.onload = () => {
 		preloader.style.opacity = isCount;
 		isCount -= 0.1;
 	if(isCount < 0.1){
+		preloader.parentElement.removeChild(preloader);
 		clearInterval(period);
 	}
 	},100);
